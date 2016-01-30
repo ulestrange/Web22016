@@ -17,6 +17,8 @@ namespace FormsApplication
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             string sportResponse = "You watch the following Sports: ";
+            string dayResponse = "You watch on the following days: ";
+
 
             foreach (ListItem sportItem in lstSports.Items)
             {
@@ -27,7 +29,27 @@ namespace FormsApplication
 
             }
 
+            foreach (ListItem dayItem in lstDays.Items)
+            {
+                if (dayItem.Selected)
+                {
+                    dayResponse += dayItem.Value + " ";
+                }
+
+            }
+
             lblResponse.Text = sportResponse;
+            lblResponseDays.Text = dayResponse;
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            lblResponse.Text = "";
+            lblResponseDays.Text = "";
+            lstDays.ClearSelection();
+            lstSports.ClearSelection();
+
+
         }
     }
 }

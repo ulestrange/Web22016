@@ -17,7 +17,7 @@
             <asp:ListItem>Gaelic Football</asp:ListItem>
             <asp:ListItem>Rugby</asp:ListItem>
         </asp:ListBox>
-        <asp:CheckBoxList ID="CheckBoxList1" runat="server">
+        <asp:CheckBoxList ID="lstDays" runat="server">
                         <asp:ListItem>Monday</asp:ListItem>
             <asp:ListItem>Tuesday</asp:ListItem>
             <asp:ListItem>Wednesday</asp:ListItem>
@@ -28,10 +28,13 @@
         </asp:CheckBoxList>
         <br />
         <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
-&nbsp;<asp:Button ID="btnClear" runat="server" Text="Clear" />
+&nbsp;<asp:Button ID="btnClear" runat="server" Text="Clear" OnClick="btnClear_Click" />
         <br />
         <br />
-        <asp:Label ID="lblResponse" runat="server" Text="Response"></asp:Label>
+        <asp:Label ID="lblResponse" runat="server" Text=""></asp:Label>
+        <br />
+        <br />
+        <asp:Label ID="lblResponseDays" runat="server" Text=""></asp:Label>
     </div>
     </form>
 </body>
